@@ -51,6 +51,10 @@ app.use("/api/v1/user", userRoute);
 app.use("/api/v1/admin", adminRoute);
 app.use("/api/v1/order", orderRoute);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the backend of the course management system");
+})
+
 // Cloudinary configuration code
 cloudinary.config({
   cloud_name: process.env.cloud_name,
